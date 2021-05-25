@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // The XDN Devtools is a widget that helps developers understand how their site interacts with the XDN
   // For more details see - https://developer.moovweb.com/guides/devtools
   // Comment out for easier speed measurements
-  installDevtools()
+  // installDevtools()
 
   // @ts-ignore
   install({
 
-    includeCacheMisses: true, // DISABLE THIS LINE IN PRODUCTION
+    // includeCacheMisses: true, // DISABLE THIS LINE IN PRODUCTION
 
     // watch: [
     //   {

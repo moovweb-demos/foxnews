@@ -18,9 +18,11 @@ export default function transform(response: Response, request: Request) {
       <script src="/main.js" defer="defer"></script>
     `)
 
-    // your transformations go here
-    // ...
-    // ...
+     // Relativise links
+     $('a[href^="https://www.foxnews.com"]').map((i, el) => {
+      var link = $(el).attr('href') || '';
+      $(el).attr('href', link.replace('https://www.foxnews.com/', '/'));
+    })
 
     response.body = $.html()
   }
