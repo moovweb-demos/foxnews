@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // @ts-ignore
   install({
 
-    // includeCacheMisses: true, // DISABLE THIS LINE IN PRODUCTION
+    includeCacheMisses: true, // DISABLE THIS LINE IN PRODUCTION
 
     // watch: [
     //   {

@@ -14,11 +14,19 @@ export default new Router()
 
   // PDP page
   .match('/politics/:path*', shoppingFlowRouteHandler)
+  .match('/opinion/:path*', shoppingFlowRouteHandler)
+  .match('/media/:path*', shoppingFlowRouteHandler)
+  .match('/entertainment/:path*', shoppingFlowRouteHandler)
 
   // example route for cacheable assets:
   .match('/images/:path*', ({ cache, proxy }) => {
     cache(CACHE_ASSETS)
     return proxy('origin')
+  })
+
+  .match('/l0-images/:path*', ({ proxy, cache }) => {
+    cache(CACHE_ASSETS)
+    return proxy('images', { path: ':path*' })
   })
 
   .match('/service-worker.js', ({ serviceWorker }) => serviceWorker('dist/service-worker.js'))
